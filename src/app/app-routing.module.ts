@@ -12,10 +12,10 @@ const routes: Routes = [
     path: 'edit/:id',
     component: EditEmployeeComponent
   },
-  // {
-  //   path: 'create-employee',
-  //   component: CreateEmployeeComponent
-  // }
+  {
+    path: 'create-employee',
+    component: CreateEmployeeComponent
+  }
 ];
 
 @NgModule({
