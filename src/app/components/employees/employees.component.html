@@ -1,0 +1,33 @@
+<div class="create-employee">
+ <div class="container">
+  <a [routerLink]="['/create-employee']" class="btn btn-primary">Add Employee</a>
+ </div>
+</div>
+<div class="employee-list">
+ <div class="container">
+  <h1>Employees List</h1>
+  <table>
+   <thead>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Salary</th>
+    <th>options</th>
+   </thead>
+   <tbody>
+    <ng-container *ngFor="let employee of employees">
+     <tr>
+      <td>{{ employee.id }}</td>
+      <td>{{ employee.employee_name }}</td>
+      <td>{{ employee.employee_age }}</td>
+      <td>{{ employee.employee_salary }}</td>
+      <td>
+       <button type="button" class="btn btn-danger" (click)="deleteEmployee(employee.id)">Delete</button>
+       <a [routerLink]="['/edit', employee.id]" class="btn btn-warning">Edit</a>
+      </td>
+     </tr>
+    </ng-container>
+   </tbody>
+  </table>
+ </div>
+</div>

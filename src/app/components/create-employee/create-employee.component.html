@@ -1,0 +1,20 @@
+<div class="form-holder">
+ <div class="container">
+  <h1>Create New Employee</h1>
+  <form id="create-employee" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+   <div class="input-wrp">
+    <label for="name">Name : </label>
+    <input id="name" type="text" formControlName="name" required>
+   </div>
+   <div class="input-wrp">
+    <label for="age">age : </label>
+    <input id="age" type="number" formControlName="age" required>
+   </div>
+   <div class="input-wrp">
+    <label for="salary">salary : </label>
+    <input id="salary" type="number" formControlName="salary" required>
+   </div>
+   <button class="btn" type="submit" [disabled]="!myForm.valid">Submit</button>
+  </form>
+ </div>
+</div>
